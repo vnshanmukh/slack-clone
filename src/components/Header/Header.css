@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--slack-color);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  flex: 0.3;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.header__search {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  background-color: #421f44;
+  text-align: center;
+  color: grey;
+  border: 1px gray solid;
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.header__search > input {
+  background: transparent;
+  border: none;
+  min-width: 35vw;
+  text-align: center;
+  text-decoration: none;
+  outline-width: 0;
+  color: white;
+}
+
+.header__right {
+  display: flex;
+  flex: 0.3;
+  justify-content: center;
+  align-items: center;
+}
+.header__left > .MuiSvgIcon-root {
+  margin-left: 5px;
+}
+
+.header__right > .MuiSvgIcon-root {
+  margin-left: auto;
+  margin-right: 20px;
+}
