@@ -1,4 +1,4 @@
-import { FiberManualRecord } from "@material-ui/icons";
+import { Create, FiberManualRecord } from "@material-ui/icons";
 import React from "react";
 import "./Sidebar.css";
 function Sidebar() {
@@ -6,13 +6,13 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__info">
-          <h2>Team</h2>
+          <h2>Team </h2>
           <h3>
             <FiberManualRecord />
-            hello
+            shanmukh
           </h3>
         </div>
-        JBHn 11
+        <Create />
       </div>
     </div>
   );
