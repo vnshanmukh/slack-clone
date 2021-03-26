@@ -13,10 +13,13 @@ import {
 } from "@material-ui/icons";
 import React, { useState, useEffect } from "react";
 import db from "../../Firebase";
+import { useStateValue } from "../../StateProvider";
 import SidebarOption from "../SidebarOption/SidebarOption";
 import "./Sidebar.css";
 function Sidebar() {
   const [channels, setChannels] = useState([]);
+  const [{ user }] = useStateValue();
+
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) => {
       setChannels(
@@ -34,7 +37,7 @@ function Sidebar() {
           <h2>Team </h2>
           <h3>
             <FiberManualRecord />
-            shanmukh
+            {user?.displayName}
           </h3>
         </div>
         <Create />

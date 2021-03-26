@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { InfoOutlined, StarBorderOutlined } from "@material-ui/icons";
 import db from "../../Firebase";
 import Message from "../Message/Message";
+import ChatInput from "../ChatInput/ChatInput";
 
 function Chat() {
   const { roomId } = useParams();
@@ -23,7 +24,6 @@ function Chat() {
         setroomMessages(snapshot.docs.map((doc) => doc.data()))
       );
   }, [roomId]);
-  console.log(roommessages);
 
   return (
     <div className="chat">
@@ -48,6 +48,9 @@ function Chat() {
             userImage={message.userimage}
           />
         ))}
+      </div>
+      <div key={roomId} className="chat__input">
+        <ChatInput channelName={roomdetails?.name} channelId={roomId} />
       </div>
     </div>
   );

@@ -4,11 +4,14 @@ import { HelpOutline } from "@material-ui/icons";
 import { QueryBuilder } from "@material-ui/icons";
 import { Search } from "@material-ui/icons";
 import "./Header.css";
+import { useStateValue } from "../../StateProvider";
 function Header() {
+  const [{ user }] = useStateValue();
+
   return (
     <div className="header">
       <div className="header__left">
-        <Avatar alt="logo" className="header__avatar" />
+        <Avatar alt="logo" className="header__avatar" src={user?.photoURL} />
         <QueryBuilder />
       </div>
       <div className="header__search">
